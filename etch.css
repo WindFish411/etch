@@ -9,6 +9,6 @@
   /*boxes shouldn't have any borders, margins, or padding.*/
   /*the box height and width needs to change to fit the space of the container. */
   .box {
-    background-color: red;
-    flex-grow: 1;
+    flex: 0 0 calc(33.33%);
+    background-color: grey;
   }
