@@ -4,13 +4,14 @@
 
 
 const button1 = document.getElementById("button");
-button1.addEventListener('click',() => createGrid(16));
+button1.addEventListener('click',() => createGrid(16, 16));
 
 
-function createGrid(boxNumber) {
-    const container = document.getElementById("container");
+function createGrid(rows, columns) {
+    container.style.setProperty('--columns', columns);
+    container.style.setProperty('--rows', rows);
   
-    for (let i = 0; i < boxNumber; i++) {
+    for (let i = 0; i < (rows * columns); i++) {
       const box = document.createElement('div');
       box.className = 'box';
       container.appendChild(box);

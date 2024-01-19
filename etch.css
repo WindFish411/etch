@@ -1,6 +1,5 @@
 #container {
     display: flex;
-    
     border: 10px solid black;
     width: 500px;
     height: 500px;
@@ -9,6 +8,7 @@
   /*boxes shouldn't have any borders, margins, or padding.*/
   /*the box height and width needs to change to fit the space of the container. */
   .box {
-    flex: 0 0 calc(33.33%);
-    background-color: grey;
+    flex: 0 0 calc(100% / var(--columns));
+    box-sizing: border-box;
+    height: calc(100% / var(--rows));
   }
