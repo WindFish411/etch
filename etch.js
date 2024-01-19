@@ -1,6 +1,17 @@
 
+//randomInteger + randomRgbColor generates a random color. 
+function randomInteger(max) {
+    return Math.floor(Math.random()*(max + 1));
+}
 
 
+function randomRgbColor() {
+    let r = randomInteger(255);
+    let g = randomInteger(255);
+    let b = randomInteger(255);
+    return [r,g,b];
+    //need to find a way to add this to CSS for boxes
+}
 
 
 const button1 = document.getElementById("button");
@@ -9,7 +20,6 @@ button1.addEventListener('click', function(){
     let size = gridInput;
     createGrid(size);
 });
-
 
 function createGrid(size) {
     const gridInput = document.getElementById('container');
@@ -22,10 +32,16 @@ function createGrid(size) {
       const box = document.createElement('div');
       box.className = 'box';
       container.appendChild(box);
+
+      box.addEventListener('mouseover', function(){
+            const randomColor = randomRgbColor();
+            box.id = 'coloredBox';
+            coloredBox.style.backgroundColor = `rgb(${randomColor[0]}, ${randomColor[1]}, ${randomColor[2]}}`
+      });
     }
   }
   
- 
+//How I want to approach: Create new class -> upon mouse hover -> add new class
 
 
 
@@ -34,38 +50,10 @@ function createGrid(size) {
 
 
 
-//Rebuilding logic. Saving old logic just in case. 
 
-//button2.addEventListener('click',() => displayGrid())
 
-/*
-function createGrid(boxNumber){
-    const container = document.getElementById("container");
-    let grid = [];
-    for (let i = 0; i < boxNumber; i++) {
-        grid[i] = [];
-        for (let j = 0; j < boxNumber; j++) {
-            const box = document.createElement('div');
-            box.className = 'box';
-            container.appendChild(box);
-            grid[i][j] = box;
-      }
-    }
-    return grid;
-}
 
-const container = document.getElementById("container");
 
-function displayGrid(grid){
-    container.innerHTML = '';
-    for (let i = 0; i < grid.length; i++) {
-        for (let j = 0; j < grid[i].length; j++) {
-            container.appendChild(grid[i][j]);
-            console.log(grid);
-        }
-    }
-}
-*/
 
 
 

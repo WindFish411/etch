@@ -2,8 +2,8 @@
     display: flex;
 
     border: 10px solid black;
-    width: 500px;
-    height: 500px;
+    width: 669px;
+    height: 669px;
     flex-wrap: wrap;
   }
   /*boxes shouldn't have any borders, margins, or padding.*/
