@@ -1,0 +1,1 @@
+This project is an etch-a-sketch of sorts. Basically I am aiming to make a grid of varying size depending on user input and add properties to the cells. 
