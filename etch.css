@@ -1,14 +1,13 @@
-.container {
-    padding: 32px;
+#container {
     display: flex;
     flex-wrap: wrap;
+    border: 10px solid black;
+    width: 500px;
+    height: 500px;
   }
-  
+  /*boxes shouldn't have any borders, margins, or padding.*/
+  /*the box height and width needs to change to fit the space of the container. */
   .box {
-    border: 1px solid #eee;
-    box-shadow: 2px 4px 16px rgba(0,0,0,.06);
-    border-radius: 4px;.
-    padding: 16px;
-    margin: 16px;
-    width: 300px;
+    
+    flex-grow: 1;
   }
