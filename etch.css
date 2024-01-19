@@ -8,9 +8,12 @@
   }
   /*boxes shouldn't have any borders, margins, or padding.*/
   /*the box height and width needs to change to fit the space of the container. */
+  /*the box should change color when the cursor hovers over it (after creating the grid) */
   .box {
-    flex: 0 0 calc(100% / var(--rows));
+    flex: 0 0 calc(100% / var(--columns));
     box-sizing: border-box;
-    height: calc(100% / var(--columns));
+    height: calc(100% / var(--rows));
     border: 1px solid black;
   }
+
+  
