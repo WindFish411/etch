@@ -4,15 +4,17 @@
 
 //const gridNumber = document.getElementById("grid");
 const button1 = document.getElementById("button");
+const button2 = document.getElementById("button2");
 
 button1.addEventListener('click',() => createGrid(16));
+button2.addEventListener('click',() => displayGrid())
 
 function createGrid(boxNumber){
-    //need to create box divs inside of function. I'll worry about activating the input/button later. 
-    //First step is to get the 16x16 grid displayed on the page. 
 
     const container = document.getElementById("container");
-    container.innerHTML = "";
+    
+
+
     let grid = [];
 
     for (let i = 0; i < boxNumber; i++) {
@@ -20,12 +22,23 @@ function createGrid(boxNumber){
         for (let j = 0; j < boxNumber; j++) {
             const box = document.createElement('div');
             box.className = 'box';
-            //container.appendChild(box);
-            grid[i][j] = container.appendChild(box);
-            container.appendChild(grid[i][j]);
-            console.log(i);
-            console.log(j);
+            container.appendChild(box);
+            grid[i][j] = box;
       }
+    }
+    return grid;
+}
+
+
+const container = document.getElementById("container");
+
+function displayGrid(grid){
+    container.innerHTML = '';
+    for (let i = 0; i < grid.length; i++) {
+        for (let j = 0; j < grid[i].length; j++) {
+            container.appendChild(grid[i][j]);
+            console.log(grid);
+        }
     }
 }
 
