@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="etch.css">
+    <title>ETCH-A-SKETCH</title>
 </head>
 <body>
-    <!--The grid is set in a box. It is essentially fixed in place. Should be able to change the amount of squares without the size of the box changing.-->
-    <!--I imagine that JS will be used to create the grid, not sure about the HTML really. Apparently flexbox is the main challenge here?-->
-    <!--Flexbox? I guess the padding, margin, and border values can really mess with how it looks? Start by just getting a grid down using JS.-->
-    <!--Maybe creating 16 divs of class square can be used? selectByClass('square')-->
-    <p id="square"></p>
+    <h1>ETCH-A-SKETCH</h1>  
+
+    <label>Please enter a number:</label>
+    <input type="number" id="grid">
+    <button id = "button">Enter</button>
+
+
+    <p id="container"></p>
+        <div class='box'></div>
+        
   
 
     <script src="etch.js"></script>
