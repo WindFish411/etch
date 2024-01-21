@@ -1,6 +1,33 @@
+body{
+  background-color: rgb(109, 255, 211);
+  text-align: center;
+  font-family: "Lucida Console", "Courier New", monospace;
+
+}
+
+#squares{
+  margin: 20px; 
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+button#squares:hover {
+  background-color: white;
+  color: black;
+}
+
+.outerContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #container {
     display: flex;
-
+    justify-content: center;
     border: 10px solid black;
     width: 669px;
     height: 669px;

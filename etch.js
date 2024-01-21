@@ -1,18 +1,25 @@
 
 
+createGrid(16);
+
 //Need a new button that alerts the user and prompts input. 
 let button2 = document.getElementById("squares");
 button2.addEventListener("click", function(){
-  let squares = prompt("Please a number under 100.", 16);
+  let input = prompt("Please a number between 0 and 100.", 16);
 
-  if(squares > 99){
-    alert ("Please choose a number under 100.");
+  if(input === null){
+    return;
+  }
 
-  }
-  else{
-    let size = squares;
-    createGrid(size);
-  }
+  let squares = parseInt(input);
+
+    if(squares > 99 || squares < 1 || isNaN(squares)){
+      alert ("Please choose a valid input.");
+    }
+    else{
+      let size = squares;
+      createGrid(size);
+    }
 });
 
 
