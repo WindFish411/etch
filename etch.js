@@ -1,10 +1,22 @@
 
-const button1 = document.getElementById("button");
-button1.addEventListener('click', function(){
-    let gridInput = document.getElementById("grid").value;
-    let size = gridInput;
+
+//Need a new button that alerts the user and prompts input. 
+let button2 = document.getElementById("squares");
+button2.addEventListener("click", function(){
+  let squares = prompt("Please a number under 100.", 16);
+
+  if(squares > 99){
+    alert ("Please choose a number under 100.");
+
+  }
+  else{
+    let size = squares;
     createGrid(size);
+  }
 });
+
+
+
 
 function createGrid(size) {
     const container = document.getElementById('container');
@@ -29,8 +41,6 @@ function createGrid(size) {
     }
   }
   
-
-
 //randomInteger + randomRgbColor generates a random color. 
 function randomInteger(max) {
     return Math.floor(Math.random()*(max + 1));
@@ -42,7 +52,6 @@ function randomRgbColor() {
     let g = randomInteger(255);
     let b = randomInteger(255);
     return [r,g,b];
-    //need to find a way to add this to CSS for boxes
 }
 
 
